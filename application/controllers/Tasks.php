@@ -12,8 +12,10 @@
         $data['counts'] = $this->Task_model->get_counts();
         $this->load->view('tasks_view', $data);
     }
-
-    public function add() {
+  public function add() {
+    $this->load->view('add_task');
+}
+    public function store() {
         $title = $this->input->post('title');
         $due_date = $this->input->post('due_date');
         $priority = $this->input->post('priority');
@@ -30,5 +32,10 @@
         $this->Task_model->mark_completed($id);
         redirect('tasks');
     }
+
+
+  
+
+ 
 }
  

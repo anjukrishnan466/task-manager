@@ -32,7 +32,9 @@
             </select>
         </div>
         <div class="col-md-3">
-            <button type="submit" class="btn btn-primary w-100">Add Task</button>
+            <a  class="btn btn-primary w-100" href="<?= site_url('tasks/add') ?>">+ Add Task</a><br><br>
+
+            <!-- <button type="submit" class="btn btn-primary w-100">Add Task</button> -->
         </div>
     </form>
 
