@@ -1,10 +1,12 @@
 <?php
 class Task_model extends CI_Model {
 
-
-     public function get_tasks() {
-        $this->db->order_by('due_date', 'ASC');
-        return $this->db->get_where('tasks', array('status' => 'pending'))->result();
+    public function get_tasks($status = 'pending', $sort = 'due_date', $order = 'asc') {
+        if ($status !== 'all') {
+            $this->db->where('status', $status);
+        }
+        $this->db->order_by($sort, $order);
+        return $this->db->get('tasks')->result();
     }
 
     public function add_task($title, $due_date, $priority) {
@@ -28,4 +30,3 @@ class Task_model extends CI_Model {
         ];
     }
 }
- 

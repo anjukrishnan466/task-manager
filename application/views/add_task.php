@@ -5,7 +5,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f4f6f8;
+            background:#f4f6f8;
             padding: 40px;
         }
 
@@ -30,7 +30,7 @@
         }
 
         input[type="text"],
-        input[type="date"],
+        input[type="datetime-local"],
         select {
             width: 100%;
             padding: 10px;
@@ -44,7 +44,7 @@
             margin-top: 20px;
             width: 100%;
             padding: 10px;
-            background-color: #2e86de;
+            background-color:#2e86de;
             border: none;
             color: white;
             font-size: 16px;
@@ -53,14 +53,14 @@
         }
 
         button:hover {
-            background-color: #1e5fad;
+            background-color:#1e5fad;
         }
 
         .back-link {
             display: block;
             margin-top: 20px;
             text-align: center;
-            color: #2e86de;
+            color:#2e86de;
             text-decoration: none;
         }
 
@@ -76,8 +76,8 @@
             <label>Title</label>
             <input type="text" name="title" required>
 
-            <label>Due Date</label>
-            <input type="date" name="due_date" required>
+            <label>Due Date & Time</label>
+            <input type="datetime-local" name="due_date" required>
 
             <label>Priority</label>
             <select name="priority" required>
